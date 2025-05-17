@@ -115,7 +115,7 @@ function App() {
           <div className="section-content">
             <div className="hero-content">
               <div className="profile-image">
-                <img src="https://via.placeholder.com/400x500" alt="Profile" className="profile-img" />
+                <img src="/pics/me.jpeg" alt="Profile" className="profile-img" />
               </div>
 
               <div className="hero-text">
