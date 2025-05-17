@@ -41,20 +41,6 @@ const skills = [
   { name: "Wazuh", icon: <FaTools />, className: "wazuh-icon" }
 ];
 
-<div className="social-links">
-  <a href="https://www.linkedin.com/in/your-profile" className="social-link" target="_blank" rel="noopener noreferrer">
-    <span className="social-icon">
-      <FaLinkedin size={24} />
-    </span>
-  </a>
-  <a href="https://github.com/your-username" className="social-link" target="_blank" rel="noopener noreferrer">
-    <span className="social-icon">
-      <FaGithub size={24} />
-    </span>
-  </a>
-</div>
-
-
 function App() {
   const aboutRef = useRef(null)
   const projectsRef = useRef(null)
