@@ -24,15 +24,19 @@ body {
 /* Navigation */
 .navbar {
   background-color: transparent;
-  padding: 20px 0;
+  backdrop-filter: blur(8px);
+  padding: 1rem 0;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 100;
+  z-index: 1000;
 }
 
 .navbar .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -40,9 +44,10 @@ body {
 
 .logo {
   color: #2e3191;
-  font-size: 1.5rem;
+  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
   font-weight: 700;
   text-decoration: none;
+  white-space: nowrap;
 }
 
 .nav-links {
@@ -53,6 +58,7 @@ body {
 .nav-link {
   color: #2e3191;
   font-weight: 500;
+  font-size: clamp(0.95rem, 1.25vw, 1.1rem);
   text-decoration: none;
   background: none;
   border: none;
@@ -199,6 +205,7 @@ body {
 }
 
 /* About Section */
+
 .about-section {
   background-color: white;
   padding: 2rem;
@@ -216,7 +223,7 @@ body {
   .about-content {
     flex-direction: row;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap;
   }
 }
@@ -226,6 +233,7 @@ body {
   flex-direction: column;
   gap: 2rem;
   width: 100%;
+  max-width: 100%;
 }
 
 @media (min-width: 768px) {
@@ -251,7 +259,7 @@ body {
 
 .skill-list {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
   gap: 0.5rem 10rem;
   list-style: none;
   padding: 0;
@@ -259,7 +267,7 @@ body {
   margin: 0;
 }
 
-@media (min-width: 480px) {
+/* @media (min-width: 480px) {
   .skill-list {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -277,7 +285,7 @@ body {
     grid-template-columns: repeat(5, 1fr);
     gap: 0.5rem 6rem;
   }
-}
+} */
 
 .skill-item {
   font-size: clamp(1.5rem, 2vw, 2rem);
