@@ -123,7 +123,7 @@ function App() {
                 <h2 className="sub-heading">Computer Science at FAST University</h2>
 
                 <p className="bio">
-                  I am a junior at FAST University majoring in Computer Science on the Cybersecurity Track.
+                  I am a senior at FAST University majoring in Computer Science on the Cybersecurity Track.
                   Hands-on experience in penetration testing, backend development, and cloud-native apps. 
                   Built AI-driven threat detection for web attacks, deployed an AI-integrated honeypot, 
                   developed a containerized hospital management system, and created a network tool for real-time threat monitoring.
@@ -142,6 +142,8 @@ function App() {
           </div>
         </div>
       </section>
+
+      <div className="section-divider"></div>
 
       {/* About Section */}
       <section ref={aboutRef} className="section about-section">
@@ -168,8 +170,10 @@ function App() {
         </div>
       </section>
 
+      <div className="section-divider"></div>
+
       {/* Projects Section */}
-      <section ref={projectsRef} className="section projects-section">
+      <section ref={projectsRef} className="projects-section">
         <div className="container section-container">
           <div className="section-content">
             <h1 className="section-heading">My Projects</h1>
@@ -177,35 +181,57 @@ function App() {
             <div className="projects-grid">
               {/* Project 1 */}
               <div className="project-item">
-                <img
-                  src="https://via.placeholder.com/600x600"
-                  alt="Stanford University Campus"
-                  className="project-img"
-                />
+                <a href="https://yarkhan02.github.io/weather-app" className="project-link">
+                  <img
+                    src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914"
+                    alt="University Campus"
+                    className="project-img"
+                  />
+                  <div className="project-title">Weather App</div>
+                </a>
               </div>
 
               {/* Project 2 */}
               <div className="project-item">
-                <img src="https://via.placeholder.com/600x600" alt="Sky with clouds" className="project-img" />
+                <a href="https://yarkhan02.github.io/weather-app" className="project-link">
+                  <img
+                    src="https://images.unsplash.com/photo-1506744038136-46273834b3fb"
+                    alt="Weather App"
+                    className="project-img"
+                  />
+                  <div className="project-title">Weather App</div>
+                </a>
               </div>
 
               {/* Project 3 */}
               <div className="project-item">
-                <img src="https://via.placeholder.com/600x600" alt="Computer RAM modules" className="project-img" />
+                <a href="https://yarkhan02.github.io/weather-app" className="project-link">
+                  <img
+                    src="https://images.unsplash.com/photo-1506744038136-46273834b3fb"
+                    alt="Map Project"
+                    className="project-img"
+                  />
+                  <div className="project-title">Weather App</div>
+                </a>
               </div>
 
               {/* Project 4 */}
               <div className="project-item">
-                <img
-                  src="https://via.placeholder.com/600x600"
-                  alt="Digital globe with tech elements"
-                  className="project-img"
-                />
+                <a href="https://yarkhan02.github.io/weather-app" className="project-link">
+                  <img
+                    src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914"
+                    alt="Cyber Security"
+                    className="project-img"
+                  />
+                  <div className="project-title">Weather App</div>
+                </a>
               </div>
             </div>
           </div>
         </div>
       </section>
+
+      <div className="section-divider"></div>
 
       {/* Contact Section */}
       <section ref={contactRef} className="section contact-section">

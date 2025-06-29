@@ -8,7 +8,7 @@
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
     "Helvetica Neue", sans-serif;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   color: #2e3191;
   line-height: 1.6;
   overflow-x: hidden;
@@ -78,11 +78,10 @@ body {
 /* Section common styles */
 .section {
   min-height: 100vh;
+  padding: 4rem 1rem;
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 80px 0;
-  position: relative;
+  justify-content: flex-start;
 }
 
 .section-container {
@@ -104,7 +103,15 @@ body {
 .section-heading {
   text-align: center;
   font-size: 2.5rem;
-  margin-bottom: 1rem;
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
+.section-divider {
+  width: 100%;
+  height: 1px;
+  background-color: #ccc;
+  margin-top: 0;  /* Prevent double spacing */
 }
 
 /* Hero Section */
@@ -401,6 +408,18 @@ body {
 /* Projects Section */
 .projects-section {
   background-color: white;
+  min-height: 100vh;
+  padding: 4rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.projects-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center; /* This is the key */
+  padding: 2rem 1rem;
 }
 
 .projects-grid {
@@ -419,22 +438,45 @@ body {
 }
 
 .project-item {
-  aspect-ratio: 1 / 1;
-  overflow: hidden;
+  position: relative;
   border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
-.project-item:hover {
-  transform: translateY(-5px);
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+  width: 100%;
+  cursor: pointer;
 }
 
 .project-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
 }
+
+.project-item:hover .project-img {
+  transform: scale(1.03);
+}
+
+.project-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.project-item:hover .project-title {
+  opacity: 1;
+}
+
 
 /* Contact Section */
 .contact-section {
